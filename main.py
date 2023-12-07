@@ -53,24 +53,8 @@ if args.weight_decay > 0:
 if args.seed > 0:
     main_path = main_path+f'/ensemble'
 
-if args.model in OOD_list:
-    ckpt_path = f'{main_path}/checkpoints_OOD_for_{args.data}/{args.y_label}/{args.model}_{args.y_label}'
-elif args.model in MLP_variety_list:
-    ckpt_path = f'{main_path}/checkpoints_for_{args.data}/{args.y_label}/MLP_variety/{args.model}_{args.y_label}'
-elif args.model in MLP_add_vel_list + LSTM_add_vel_list + Conv1D_add_vel_list:
-    ckpt_path = f'{main_path}/checkpoints_for_{args.data}/{args.y_label}/MLP_add_vel/{args.model}_{args.y_label}'
-elif args.model in Conv1D_variety_list:
-    ckpt_path = f'{main_path}/checkpoints_for_{args.data}/{args.y_label}/Conv1D_variety/{args.model}_{args.y_label}'
-elif args.model in LSTM_variety_list:
-    ckpt_path = f'{main_path}/checkpoints_for_{args.data}/{args.y_label}/LSTM_variety/{args.model}_{args.y_label}'
-elif args.model in Transformer_variety_list:
-    ckpt_path = f'{main_path}/checkpoints_for_{args.data}/{args.y_label}/Transformer_variety/{args.model}_{args.y_label}'
-elif args.model in Transformer_add_vel_list:
-    ckpt_path = f'{main_path}/checkpoints_for_{args.data}/{args.y_label}/Transformer_add_vel/{args.model}_{args.y_label}'
-elif args.model in Seq2Seq_list:
-    ckpt_path = f'{main_path}/checkpoints_for_{args.data}/{args.y_label}/Seq2Seq/{args.model}_{args.y_label}'
-else:
-    ckpt_path = f'{main_path}/checkpoints_for_{args.data}/{args.y_label}/{args.model}_{args.y_label}'
+ckpt_path = f'{main_path}/checkpoints_for_{args.data}/{args.y_label}/MLP_add_vel/{args.model}_{args.y_label}'
+
 
 if args.seed > 0:
     ckpt_path = ckpt_path+f'/seed{args.seed}'
@@ -282,17 +266,7 @@ if __name__ == '__main__':
     else:
         output_size = 1
 
-
-    # if (args.model == 'Transformer') or (args.model == 'Transformer_history') or (args.model == 'Transformer2'):
-    if args.model in Transformer_list:
-        Prednet = NNPred(output_size=output_size)
-    elif args.model in MLP_LSTM_list:
-        Prednet = NNPred(2, output_size=output_size, hidden_size=hidden_size, batch_size=BatchSize)
-    elif args.model in Seq2Seq_list:
-        Prednet = NNPred(input_size=2, output_size=1 if 'dis' in args.y_label else 2,
-                         pred_length=output_size//2 if 'OOD' in args.y_label else pred_xy.shape[1])
-    elif args.model in OOD_list:
-        Prednet = NNPred(input_size=2, batch_size=BatchSize, device=device)
+    Prednet = NNPred(2, output_size=output_size, hidden_size=hidden_size, batch_size=BatchSize)
 
     print(device)
 
