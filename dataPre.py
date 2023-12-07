@@ -97,12 +97,6 @@ class TrajectoryDataset(Dataset):
             return (history_xy, pred_xy, dis_error_with_scale)
         elif self.y_label in ['dis_with_scaler_with_ood', 'dis_with_scaler_with_OD']:
             return (history_xy, pred_xy, gt_xy, dis_error_with_scale)
-        # elif self.y_label == 'OOD_history':
-        #     return (history_xy, pred_xy, gt_ADE)
-        # elif self.y_label == 'OOD_fut':
-        #     return (gt_xy, pred_xy, gt_ADE)
-        # elif self.y_label == 'OOD_all':
-        #     return (np.vstack([history_xy, gt_xy]), pred_xy, gt_ADE)
 
 
     def load_grip_data(self):
@@ -127,23 +121,6 @@ class TrajectoryDataset(Dataset):
             self.X_frames_fut_no_scaler = dataS['gt_xy_no_scaler'].values
         self.ADE_frames = dataS['ADE'].values
         self.FDE_frames = dataS['FDE'].values
-
-
-
-    # TODO: 可以尝试归一化？
-    # def normalize_data(self):
-    #     A = [list(x) for x in zip(*(self.X_frames))]
-    #     A = torch.tensor(A)
-    #     A = A.view(-1, A.shape[2])
-    #     print('A:', A.shape)
-    #     self.mn = torch.mean(A, dim=0)
-    #     self.range = (torch.max(A, dim=0).values - torch.min(A, dim=0).values) / 2.0
-    #     self.range = torch.ones(self.range.shape, dtype=torch.double)
-    #     self.std = torch.std(A, dim=0)
-    #     # self.X_frames = [torch.tensor(item) for item in self.X_frames]
-    #     # self.Y_frames = [torch.tensor(item) for item in self.Y_frames]
-    #     self.X_frames = [(torch.tensor(item) - self.mn) / (self.std * self.range) for item in self.X_frames]
-    #     self.Y_frames = [(torch.tensor(item) - self.mn[:4]) / (self.std[:4] * self.range[:4]) for item in self.Y_frames]
 
 
 def get_dataloader(csv_file, y_label='ADE', noise_mode=False, augment=False):
