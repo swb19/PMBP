@@ -1,2 +1,3 @@
 # PMBP
- Performance Monitor for Black-Box Trajectory Prediction Model
+
+A minimal demo for implementing Performance Monitor for Black-Box Trajectory Prediction Model (PMBP).
