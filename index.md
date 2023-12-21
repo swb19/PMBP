@@ -25,7 +25,7 @@ Results show that the PMBP effectively achieves promising monitoring performance
 ```
 
 ## Visualization
-| <img src="./src/vis_pic_01.png"> | <img src="./src/vis_pic_02.png"> | <img src="./src/vis_pic_03.png"> |
+| <img src="./src/vis_pic_01.png" width="200px"> | <img src="./src/vis_pic_02.png" width="200px"> | <img src="./src/vis_pic_03.png" width="200px"> |
 
 
 ## Autonoumous Driving Planning
