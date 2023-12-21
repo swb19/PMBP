@@ -31,11 +31,11 @@ Results show that the PMBP effectively achieves promising monitoring performance
 
 ## Autonoumous Driving Planning
 
-| <video muted controls width=380> <source src="./src/planning_05.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/planning_06.mp4"  type="video/mp4"> </video> |
+| <video muted controls width=380> <source src="./src/Planning_05.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Planning_06.mp4"  type="video/mp4"> </video> |
 
-| <video muted controls width=380> <source src="./src/planning_01.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/planning_02.mp4"  type="video/mp4"> </video> |
+| <video muted controls width=380> <source src="./src/Planning_01.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Planning_02.mp4"  type="video/mp4"> </video> |
 
-| <video muted controls width=380> <source src="./src/planning_03.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/planning_04.mp4"  type="video/mp4"> </video> |
+| <video muted controls width=380> <source src="./src/Planning_03.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Planning_04.mp4"  type="video/mp4"> </video> |
 
 
 ## Contact
