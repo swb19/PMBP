@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# 1. 本文件为训练模型的主文件，可用于训练MLP、LSTM、Transformer等模型
-
-
 from __future__ import unicode_literals, print_function, division
 import time
 import math
@@ -24,10 +21,8 @@ parser.add_argument('--data', default='SinD_new_no_all_stop_train_with_scaler', 
 parser.add_argument('--weight_decay', default=0, type=float, help='设置权重正则化')
 parser.add_argument('--augment', default=False, action='store_true', help='是否用数据增强')
 parser.add_argument('--data_source', default='data', type=str, help='选择数据来源 data, data_CV, data_GRIP_seed_30, data_MATP')
-# parser.add_argument('--scaler', default=False, action='store_true', help='是否用缩放后的数据')
-# parser.add_argument('--cuda_id', default='0', type=str)
 args = parser.parse_args()
-print('基本配置：', args)
+print('configs：', args)# 打印配置信息
 
 def setup_seed(seed): # 参考:https://www.jianshu.com/p/945103d49655
     torch.manual_seed(seed)
@@ -38,7 +33,7 @@ def setup_seed(seed): # 参考:https://www.jianshu.com/p/945103d49655
 if args.seed > 0:# 设置随机数种子，但仅在需要时设置
     setup_seed(args.seed)
 
-#### 导入模型
+#### import_model
 NNPred = import_model(args)
 
 # main_path = './data' # if args.weight_decay == 0 else f'./data/checkpoints_weight_decay_{args.weight_decay}'
@@ -67,10 +62,10 @@ iters = 0
 data_file = f'./{args.data_source}/data_with_scaler_new/{args.data}.pkl' if '_with_scaler' in args.data else f'./{args.data_source}/{args.data}.pkl' # TODO:此处进行了数据源修改
 Training_generator, Test, Valid, WholeSet = get_dataloader(data_file, y_label=args.y_label, augment=args.augment)
 
-print('训练数据：', data_file)
-print('保存模型：', ckpt_path)
+print('trainning data：', data_file)
+print('save path：', ckpt_path)
 
-### 保存基本配置——超参数
+### save configs
 with open(os.path.join(ckpt_path, 'config.json'), 'w') as conf_json:
     cfg = vars(args)
     json.dump(cfg, conf_json)
@@ -129,11 +124,8 @@ def run_trainval(encoder, n_epoch, print_every=1000, plot_every=1, learning_rate
                 elif args.y_label == 'OOD_all':
                     input_batch = torch.cat([history_batch, gt_batch], dim=1)
 
-                if args.model in OOD_list:
-                    predY = encoder(input_batch)
-                else:
-                    predY = encoder(history_batch, gt_batch)
-                    predY = predY.view(128, -1, 2)
+                predY = encoder(history_batch, gt_batch)
+                predY = predY.view(128, -1, 2)
             # elif args.model in Seq2Seq_list:
             #     predY = encoder(history_batch, pred_batch)
             else:
@@ -147,10 +139,6 @@ def run_trainval(encoder, n_epoch, print_every=1000, plot_every=1, learning_rate
                 loss = criterion(predY, error_labels).to(device)
             if 'OOD' in args.y_label:
                 loss = compute_ADE(predY, input_batch)
-            # elif ('OOD' in args.y_label) & (args.model in OOD_list):
-            #     loss = compute_ADE(predY, history_batch)
-            # elif ('OOD' in args.y_label) & (args.model not in OOD_list):
-            #     loss = compute_ADE(predY.view(128,-1,2), history_batch)
 
             loss.backward()
             encoder_optimizer.step()
@@ -191,11 +179,8 @@ def run_trainval(encoder, n_epoch, print_every=1000, plot_every=1, learning_rate
                     elif args.y_label == 'OOD_all':
                         input_batch = torch.cat([history_batch, gt_batch], dim=1)
 
-                    if args.model in OOD_list:
-                        predY = encoder(input_batch)
-                    else:
-                        predY = encoder(history_batch, gt_batch)
-                        predY = predY.view(128, -1, 2)
+                    predY = encoder(history_batch, gt_batch)
+                    predY = predY.view(128, -1, 2)
                 else:
                     predY = encoder(history_batch, pred_batch)
 
@@ -207,10 +192,6 @@ def run_trainval(encoder, n_epoch, print_every=1000, plot_every=1, learning_rate
                     loss = criterion(predY, error_labels).to(device)
                 if 'OOD' in args.y_label:
                     loss = compute_ADE(predY, input_batch)
-                # elif ('OOD' in args.y_label) & (args.model in OOD_list):
-                #     loss = compute_ADE(predY, history_batch)
-                # elif ('OOD' in args.y_label) & (args.model not in OOD_list):
-                #     loss = compute_ADE(predY.view(128, -1, 2), history_batch)
 
                 ls = loss.item()
                 val_loss += ls
@@ -223,7 +204,7 @@ def run_trainval(encoder, n_epoch, print_every=1000, plot_every=1, learning_rate
             best_loss = cur_val_loss
             torch.save(encoder.state_dict(), f'{ckpt_path}/best_model.pth.tar')
             torch.save(encoder.state_dict(), f'{ckpt_path}/checkpoint_{epoch}.pth.tar')
-            print('#'*20, '第{}次循环更新模型,当前验证集损失: {:.4f}'.format(epoch, best_loss))
+            print('#'*20, 'Epoch {}, Val loss: {:.4f}'.format(epoch, best_loss))
 
         scheduler.step()
 
@@ -270,8 +251,6 @@ if __name__ == '__main__':
 
     print(device)
 
-    # if path.exists("checkpoint.pth.tar"):
-    #     Prednet.load_state_dict(torch.load('checkpoint.pth.tar'))
     Prednet = Prednet.double()
     Prednet = Prednet.to(device)
 
