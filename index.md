@@ -24,5 +24,17 @@ Results show that the PMBP effectively achieves promising monitoring performance
 }
 ```
 
+## Visualization
+| <img src="./src/vis_pic_01.png"> | <img src="./src/vis_pic_02.png"> | <img src="./src/vis_pic_03.png"> |
+
+
+## Autonoumous Driving Planning
+| <video muted controls width=380> <source src="./src/planning_05.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/planning_06.mp4"  type="video/mp4"> </video> |
+
+| <video muted controls width=380> <source src="./src/planning_01.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/planning_02.mp4"  type="video/mp4"> </video> |
+
+| <video muted controls width=380> <source src="./src/planning_03.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/planning_04.mp4"  type="video/mp4"> </video> |
+
+
 ## Contact
 If you have any questions, feel free to contact us (swb19@mails.tsinghua.edu.cn).
