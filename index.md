@@ -1,48 +1,28 @@
-# GameFormer
-[Zhiyu Huang](https://mczhi.github.io/), [Haochen Liu](https://scholar.google.com/citations?user=iizqKUsAAAAJ&hl=en), [Chen Lv](https://scholar.google.com/citations?user=UKVs2CEAAAAJ&hl=en) 
+# When Is It Likely to Fail? Performance Monitor for Black-Box Trajectory Prediction Model
+[Zhiyu Huang](https://scholar.google.com/citations?user=nJgFCn0AAAAJ&hl=zh-CN&oi=ao)
 
-[AutoMan Research Lab, Nanyang Technological University](https://lvchen.wixsite.com/automan)
+Tsinghua University
 
 ## Abstract
-Autonomous vehicles operating in complex real-world environments require accurate predictions of interactive behaviors between traffic participants. This paper tackles the interaction prediction problem by formulating it with hierarchical game theory and proposing the GameFormer model for its implementation. The model incorporates a Transformer encoder, which effectively models the relationships between scene elements, alongside a novel hierarchical Transformer decoder structure. At each decoding level, the decoder utilizes the prediction outcomes from the previous level, in addition to the shared environmental context, to iteratively refine the interaction process. Moreover, we propose a learning process that regulates an agent's behavior at the current level to respond to other agents' behaviors from the preceding level. Through comprehensive experiments on large-scale real-world driving datasets, we demonstrate the state-of-the-art accuracy of our model on the Waymo interaction prediction task. Additionally, we validate the model's capacity to jointly reason about the motion plan of the ego agent and the behaviors of multiple agents in both open-loop and closed-loop planning tests, outperforming various baseline methods. Furthermore, we evaluate the efficacy of our model on the nuPlan planning benchmark, where it achieves leading performance.
+Accurate trajectory prediction is vital for various applications, including autonomous vehicles. However, the complexity and limited transparency of many prediction algorithms often result in black-box models, making it challenging to understand their limitations and anticipate potential failures. This further raises potential risks for systems based on these prediction models. This study introduces the performance monitor for black-box trajectory prediction model (PMBP) to address this challenge. The PMBP estimates the performance of black-box trajectory prediction models online, enabling informed decision-making. The study explores various methods' applicability to the PMBP, including anomaly detection, machine learning, deep learning, and ensemble, with specific monitors designed for each method to provide online output representing prediction performance. Comprehensive experiments validate the PMBP's effectiveness, comparing different monitoring methods.
+Results show that the PMBP effectively achieves promising monitoring performance, particularly excelling in deep learning-based monitoring. It achieves improvement scores of 0.81 and 0.79 for average prediction error and final prediction error monitoring, respectively, outperforming previous white-box and gray-box methods. Furthermore, the PMBP's applicability is validated on different datasets and prediction models, while ablation studies confirm the effectiveness of the proposed mechanism. Hybrid prediction and autonomous driving planning experiments further show the PMBP's value from an application perspective. 
 
 ## Method Overview
+
 The proposed framework draws inspiration from hierarchical game-theoretic modeling of agent interactions. The framework encodes the historical states of agents and maps as background information via a Transformer-based encoder. A level-0 agent's future trajectories are decoded independently, based on the initial modality query. At level-k, an agent responds to all other agents at level-(k-1). The level-0 decoder uses modality embedding and agent history encodings as query inputs to independently decode the future trajectories and scores for level-0 agents. The level-k decoder incorporates a self-attention module to model the future interactions at level-(k-1) and appends this information to the scene context encoding.
 
-<img src="./src/method overview.png">
-
-## Interaction Prediction (Waymo)
-Given the tracks of agents for the past 1 second on a corresponding map, the objective is to predict the joint future positions of 2 interacting agents for 8 seconds into the future.
-
-<img src="./src/interaction_prediction.png" style="width:90%;">
-
-## Closed-loop Planning (Waymo)
-The planner outputs a planned trajectory at each time step, which is used to simulate the vehicle’s state at the next time step. The other agents are replayed from a log according to their observed states in the dataset.
-
-| <video muted controls width=380> <source src="./src/5bcb4673b6c09a82.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/37a22aeabedd4d1e.mp4"  type="video/mp4"> </video> |
-
-| <video muted controls width=380> <source src="./src/2ef8b857eb575693.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/28dd7530f690a80c.mp4"  type="video/mp4"> </video> |
-
-| <video muted controls width=380> <source src="./src/93a82dbe9425898c.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/b66100c3bccb68fa.mp4"  type="video/mp4"> </video> |
-
-## Closed-loop Planning (nuPlan)
-Please refer to the [GameFormer Planner](https://opendrivelab.com/e2ead/AD23Challenge/Track_4_AID.pdf) report for the details of the planning framework. The following scenarios demonstrate the performance of closed-loop planning with non-reactive agents in selected interactive situations from the nuPlan dataset.
-
-| <video muted controls width=380> <source src="./src/Pickup.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Near_multiple_vehicles.mp4"  type="video/mp4"> </video> |
-
-| <video muted controls width=380> <source src="./src/Right_turn.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Changing_lane.mp4"  type="video/mp4"> </video> |
-
-| <video muted controls width=380> <source src="./src/Waiting_for_pedestrain.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Low_speed.mp4"  type="video/mp4"> </video> |
+<img src="./src/S1.png">
 
 ## Citation
 ```
-@article{huang2023gameformer,
-  title={GameFormer: Game-theoretic Modeling and Learning of Transformer-based Interactive Prediction and Planning for Autonomous Driving},
-  author={Huang, Zhiyu and Liu, Haochen and Lv, Chen},
-  journal={arXiv preprint arXiv:2303.05760},
-  year={2023}
+@article{shao2023likely,
+  title={When Is It Likely to Fail? Performance Monitor for Black-Box Trajectory Prediction Model},
+  author={Shao, Wenbo and Li, Boqi and Yu, Wenhao and Xu, Jiahui and Wang, Hong},
+  journal={Authorea Preprints},
+  year={2023},
+  publisher={Authorea}
 }
 ```
 
 ## Contact
-If you have any questions, feel free to contact us (zhiyu001@e.ntu.edu.sg).
+If you have any questions, feel free to contact us (swb19@mails.tsinghua.edu.cn).

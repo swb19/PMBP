@@ -5,14 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a423092-2c42-489e-bfb0-091b1c4745fe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PMBP.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/S1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/212bb061c7ca4ac6.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/23b6895dd533ffbe.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/28dd7530f690a80c.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/2ef8b857eb575693.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/37a22aeabedd4d1e.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/5bcb4673b6c09a82.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/93a82dbe9425898c.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Changing_lane.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Low_speed.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Near_multiple_vehicles.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pickup.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Right_turn.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Waiting_for_pedestrain.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/b66100c3bccb68fa.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interaction_prediction.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/method overview.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +35,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "last_opened_file_path": "D:/Code/Failure_detection/PMBP/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -31,6 +43,11 @@
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\Failure_detection\PMBP\src" />
+    </key>
+  </component>
   <component name="TaskManager">
     <servers />
   </component>
