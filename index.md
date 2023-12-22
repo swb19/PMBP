@@ -13,16 +13,6 @@ Results show that the PMBP effectively achieves promising monitoring performance
 
 <img src="./src/S1.png">
 
-## Citation
-```
-@article{shao2023likely,
-  title={When Is It Likely to Fail? Performance Monitor for Black-Box Trajectory Prediction Model},
-  author={Shao, Wenbo and Li, Boqi and Yu, Wenhao and Xu, Jiahui and Wang, Hong},
-  journal={Authorea Preprints},
-  year={2023},
-  publisher={Authorea}
-}
-```
 
 ## Visualization
 
@@ -37,6 +27,18 @@ Results show that the PMBP effectively achieves promising monitoring performance
 
 | <video muted controls width=380> <source src="./src/Planning_03.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Planning_04.mp4"  type="video/mp4"> </video> |
 
+
+
+## Citation
+```
+@article{shao2023likely,
+  title={When Is It Likely to Fail? Performance Monitor for Black-Box Trajectory Prediction Model},
+  author={Shao, Wenbo and Li, Boqi and Yu, Wenhao and Xu, Jiahui and Wang, Hong},
+  journal={Authorea Preprints},
+  year={2023},
+  publisher={Authorea}
+}
+```
 
 ## Contact
 If you have any questions, feel free to contact us (swb19@mails.tsinghua.edu.cn).
