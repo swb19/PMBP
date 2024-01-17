@@ -49,6 +49,7 @@ Offline training (gray background) and online monitoring (green background) phas
 
 ![paper_6.png](src%2Fpaper_6.png)
 
+# Evaluation
 
 ## Calculation of AUCOC & IS
 <p align="center">
@@ -60,16 +61,23 @@ Offline training (gray background) and online monitoring (green background) phas
 </p>
 
 
-## Cutoff Curve for PMBP (MLP-based model with error estimation)
+## Comparison of PMBP with other methods 
+![img.png](src/comparison.png)
+
+Cutoff Curve for PMBP (MLP-based model with error estimation)
+
 <p align="center">
 <img src="src/cutoff_curve.png" width="500" alt="curve">
 </p>
+
+Temporal Analysis
 
 <p align="center">
 <img src="src/Temporal Analysis.png" width="500" alt="curve">
 </p>
 
-# Visualization
+
+## Visualization
 
 [//]: # (| <img src="./src/vis_pic_01.png" width="300px"> | <img src="./src/vis_pic_02.png" width="300px"> | <img src="./src/vis_pic_03.png" width="300px"> |)
 <img src="./src/vis_pic_01.png">
