@@ -41,6 +41,10 @@ Results show that the PMBP effectively achieves promising monitoring performance
 [//]: # (| <img src="./src/vis_pic_01.png" width="300px"> | <img src="./src/vis_pic_02.png" width="300px"> | <img src="./src/vis_pic_03.png" width="300px"> |)
 <img src="./src/vis_pic_01.png">
 
+![img.png](src/more_vis_1.png)
+
+![img_1.png](src/more_vis_2.png)
+
 
 ## Hybrid Prediction
 <p align="center">
@@ -62,9 +66,9 @@ Results show that the PMBP effectively achieves promising monitoring performance
 @article{shao2023likely,
   title={When Is It Likely to Fail? Performance Monitor for Black-Box Trajectory Prediction Model},
   author={Shao, Wenbo and Li, Boqi and Yu, Wenhao and Xu, Jiahui and Wang, Hong},
-  journal={Authorea Preprints},
+  journal={IEEE Transactions on Automation Science and Engineering},
   year={2023},
-  publisher={Authorea}
+  publisher={IEEE}
 }
 ```
 
