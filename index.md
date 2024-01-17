@@ -1,11 +1,14 @@
 [//]: # (# PMBP)
 
 [//]: # ([Wenbo Shao]&#40;https://scholar.google.com/citations?user=nJgFCn0AAAAJ&hl=zh-CN&oi=ao&#41;)
-Wenbo Shao, Boqi Li, Wenhao Yu, Jiahui Xu, Hong Wang
+[//]: # (Wenbo Shao, Boqi Li, Wenhao Yu, Jiahui Xu, Hong Wang)
 
-- School of Vehicle and Mobility, Tsinghua University 
-- Department of Civil and Environmental Engineering, University of Michigan 
-- School of Mechanical Engineering, Beijing Institute of Technology
+[//]: # ()
+[//]: # (- School of Vehicle and Mobility, Tsinghua University )
+
+[//]: # (- Department of Civil and Environmental Engineering, University of Michigan )
+
+[//]: # (- School of Mechanical Engineering, Beijing Institute of Technology)
 
 <p align="center">
 <img src="src/paper_1.png" width="500" alt="curve">
