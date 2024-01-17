@@ -14,7 +14,8 @@ Results show that the PMBP effectively achieves promising monitoring performance
 
 # Method Overview
 
-<img src="./src/S1.png">
+[//]: # (<img src="./src/S1.png">)
+![img.png](src/S1.png)
 
 
 ## Calculation of AUCOC & IS
@@ -41,6 +42,7 @@ Results show that the PMBP effectively achieves promising monitoring performance
 [//]: # (| <img src="./src/vis_pic_01.png" width="300px"> | <img src="./src/vis_pic_02.png" width="300px"> | <img src="./src/vis_pic_03.png" width="300px"> |)
 <img src="./src/vis_pic_01.png">
 
+More visualization results:
 ![img.png](src/more_vis_1.png)
 
 ![img_1.png](src/more_vis_2.png)
