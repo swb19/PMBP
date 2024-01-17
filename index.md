@@ -9,13 +9,45 @@ Wenbo Shao, Boqi Li, Wenhao Yu, Jiahui Xu, Hong Wang
 
 
 # Abstract
+<p align="center">
+<img src="src/paper_1.png" width="500" alt="curve">
+</p>
+
 Accurate trajectory prediction is vital for various applications, including autonomous vehicles. However, the complexity and limited transparency of many prediction algorithms often result in black-box models, making it challenging to understand their limitations and anticipate potential failures. This further raises potential risks for systems based on these prediction models. This study introduces the performance monitor for black-box trajectory prediction model (PMBP) to address this challenge. The PMBP estimates the performance of black-box trajectory prediction models online, enabling informed decision-making. The study explores various methods' applicability to the PMBP, including anomaly detection, machine learning, deep learning, and ensemble, with specific monitors designed for each method to provide online output representing prediction performance. Comprehensive experiments validate the PMBP's effectiveness, comparing different monitoring methods.
 Results show that the PMBP effectively achieves promising monitoring performance, particularly excelling in deep learning-based monitoring. It achieves improvement scores of 0.81 and 0.79 for average prediction error and final prediction error monitoring, respectively, outperforming previous white-box and gray-box methods. Furthermore, the PMBP's applicability is validated on different datasets and prediction models, while ablation studies confirm the effectiveness of the proposed mechanism. Hybrid prediction and autonomous driving planning experiments further show the PMBP's value from an application perspective. 
 
 # Method Overview
 
-[//]: # (<img src="./src/S1.png">)
-![img.png](src/S1.png)
+Offline training (gray background) and online monitoring (green background) phases for PMBP
+
+<p align="center">
+<img src="src/paper_2.png" width="500">
+</p>
+
+**The comprehensive design and evaluation framework of PMBP.** Various methods belonging to four type of approaches are designed and compared.
+<p align="center">
+<img src="src/S1.png" width="900">
+</p>
+
+## Anomaly Detection-based Monitoring
+[//]: # (| <img src="./src/paper_4.png" width="300px"> | <img src="./src/AD_table.png" width="300px"> |)
+[//]: # (![paper_4.png]&#40;src%2Fpaper_4.png&#41;)
+![AD.png](src%2FAD.png)
+
+## machine learning-based Monitoring
+
+<p align="center">
+<img src="src/ML.png" width="400">
+</p>
+
+## Deep Learning-based Monitoring
+
+![paper_5.png](src%2Fpaper_5.png)
+
+
+## Ensemble-based Monitoring
+
+![paper_6.png](src%2Fpaper_6.png)
 
 
 ## Calculation of AUCOC & IS
