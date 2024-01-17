@@ -36,7 +36,7 @@ Offline training (gray background) and online monitoring (green background) phas
 [//]: # (![paper_4.png]&#40;src%2Fpaper_4.png&#41;)
 ![AD.png](src%2FAD.png)
 
-## 2.2. machine learning-based Monitoring
+## 2.2. Machine Learning-based Monitoring
 
 <p align="center">
 <img src="src/ML.png" width="400">
@@ -102,10 +102,6 @@ More visualization results:
 
 | <video muted controls width=380> <source src="./src/Planning_02.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Planning_03.mp4"  type="video/mp4"> </video> |
 
-
-[//]: # (| <video muted controls width=380> <source src="./src/Planning_01.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Planning_02.mp4"  type="video/mp4"> </video> |)
-
-[//]: # (| <video muted controls width=380> <source src="./src/Planning_03.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Planning_04.mp4"  type="video/mp4"> </video> |)
 
 
 
