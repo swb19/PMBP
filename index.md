@@ -29,11 +29,11 @@ Results show that the PMBP effectively achieves promising monitoring performance
 
 ## Cutoff Curve for PMBP (MLP-based model with error estimation)
 <p align="center">
-<img src="img_1.png" width="500" alt="curve">
+<img src="src/cutoff_curve.png" width="500" alt="curve">
 </p>
 
 <p align="center">
-<img src="img_2.png" width="500" alt="curve">
+<img src="src/Temporal Analysis.png" width="500" alt="curve">
 </p>
 
 # Visualization
@@ -44,7 +44,7 @@ Results show that the PMBP effectively achieves promising monitoring performance
 
 ## Hybrid Prediction
 <p align="center">
-<img src="img_3.png" width="800" alt="curve">
+<img src="src/Hybrid Prediction .png" width="800" alt="curve">
 </p>
 
 ## Autonoumous Driving Planning
