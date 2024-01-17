@@ -97,8 +97,8 @@ More visualization results:
 
 | <video muted controls width=380> <source src="./src/Planning_05.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Planning_06.mp4"  type="video/mp4"> </video> |
 
+| <video muted controls width=380> <source src="./src/Planning_02.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Planning_03.mp4"  type="video/mp4"> </video> |
 
-| <video muted controls width=380> <source src="./src/Planning_02.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Planning_05.mp4"  type="video/mp4"> </video> |
 
 [//]: # (| <video muted controls width=380> <source src="./src/Planning_01.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/Planning_02.mp4"  type="video/mp4"> </video> |)
 
